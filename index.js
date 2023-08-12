@@ -40,7 +40,7 @@ app.post("/paymant",async(req, res)=>{
       const result = await mercadopago.preferences.create({
         items,
         back_urls:{
-            success:"http://localhost:3000"
+            success:"https://loja-virtual-seven.vercel.app/"
         }
       })
       res.json(result.body.init_point)
