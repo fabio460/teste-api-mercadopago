@@ -30,7 +30,7 @@ app.get("/", async(req,res)=>{
       ]
     };
     const result = await mercadopago.preferences.create(response)
-    res.json("api rodando...")
+    res.send("<div> <h2>Api rodando</h2> <h4>endpoint /paymant com método post</h4> </div>")
 })
 app.post("/paymant",async(req, res)=>{
     const {items} = req.body
